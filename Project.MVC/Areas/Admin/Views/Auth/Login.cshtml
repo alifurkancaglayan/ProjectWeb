@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+@model User
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link href="~/AdminTema/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/AdminTema/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/AdminTema/css/animate.css" rel="stylesheet">
+    <link href="~/AdminTema/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg d-flex align-items-center justify-content-center">
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div >
+                <img src="https://s3.cloud.ngn.com.tr/clu2-static/loginlogo/AFDE5117E6107E1FF15BFE5C10A497B7.png?AWSAccessKeyId=ALMS%3aalms-storage%40advancity.com.tr&Expires=4810888280&Signature=OMsIM0vVqG%2brWhDpw4GsUA6tuE4%3d"
+                     class="img-fluid"
+                     alt="Logo" />
+            </div>
+            <form class="pt-3" method="post" asp-area="Admin" asp-controller="Auth" asp-action="Login">
+                <div class="form-group">
+                    <input type="email" asp-for="Email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" asp-for="Password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                <p class="text-muted text-center"><small>Hesabınız yok mu?</small></p>
+                <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="~/AdminTema/js/jquery-3.1.1.min.js"></script>
+    <script src="~/AdminTema/js/popper.min.js"></script>
+    <script src="~/AdminTema/js/bootstrap.js"></script>
+</body>
+
+
+</html>

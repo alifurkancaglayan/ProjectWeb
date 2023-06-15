@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Book
+<form asp-controller="Book" asp-action="Update" method="post"  enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Kitap İsmi</label>
+        <input placeholder="@Model.Name" asp-for="Name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="hidden" asp-for="Id" />
+        <span class="text-danger" asp-validation-for="Name"></span>
+
+        <label for="exampleInputEmail1" class="form-label">Yazar İsmi</label>
+        <input placeholder="@Model.Writer" asp-for="Writer" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" asp-validation-for="Writer"></span>
+
+
+        <label for="exampleInputEmail1" class="form-label">Yazar İsmi</label>
+        <input placeholder="@Model.About" asp-for="About" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" asp-validation-for="About"></span>
+
+        <label for="exampleInputEmail1" class="form-label">Kategori</label>
+        <select asp-for="CategoryId" id="categoryId" name="categoryId" class="form-control">
+            <option value="">-- --</option>
+            @foreach (var category in ViewBag.cd)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+
+        <label for="exampleInputEmail1" class="form-label">Kitap Görseli</label>
+        <input required="" placeholder="@Model.BookImage" asp-for="BookImage" type="file" class="form-control" id="formFile" name="formFile" >
+        @*<span class="text-danger" asp-validation-for="BookImage"></span>*@
+    </div>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>

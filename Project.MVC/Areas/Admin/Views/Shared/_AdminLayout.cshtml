@@ -1,0 +1,125 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Paneli</title>
+
+    <link href="~/AdminTema/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/AdminTema/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/AdminTema/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/AdminTema/css/animate.css" rel="stylesheet">
+    <link href="~/AdminTema/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">Ali Furkan</span>
+                                <span class="text-muted text-xs block">Yazılım Mühendisi <b class=""></b></span>
+                            </a>
+
+                        </div>
+                        <div class="logo-element">
+                            AFC+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/Admin/Home/Index/"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span>  </a>
+                    </li>
+
+                    <li>
+                        <a href="/Admin/Book/Index/"><i class="fa fa-list-alt"></i> <span class="nav-label">Kitaplar</span>  </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Category/Index/"><i class="fa fa-group"></i> <span class="nav-label">Kategoriler</span>  </a>
+
+                    </li>
+
+
+                    <li>
+                        <a asp-area="Admin" asp-controller="Auth" asp-action="Logout"> <span class="nav-label">Çıkış Yap</span></a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+
+                    </div>
+
+
+                </nav>
+            </div>
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+                @RenderBody()
+
+            </div>
+            <div class="footer">
+                <div class="float-right">
+                    10GB of <strong>250GB</strong> Free.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Example Company &copy; 2014-2018
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="~/AdminTema/js/jquery-3.1.1.min.js"></script>
+    <script src="~/AdminTema/js/popper.min.js"></script>
+    <script src="~/AdminTema/js/bootstrap.js"></script>
+    <script src="~/AdminTema/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/AdminTema/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Peity -->
+    <script src="~/AdminTema/js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/AdminTema/js/inspinia.js"></script>
+    <script src="~/AdminTema/js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="~/AdminTema/js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity -->
+    <script src="~/AdminTema/js/demo/peity-demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });</script>
+    @*@await RenderSectionAsync("scripts");*@
+</body>
+
+</html>

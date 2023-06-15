@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link href="~/admintema/css/style.css" rel="stylesheet" />
+
+<div class="d-flex justify-content-center">
+    <div class="card text-bg-primary mb-3 custom-card" style="max-width: 18rem;">
+        <div class="card-header custom-header">Sistemdeki Kitap Sayısı</div>
+        <div class="card-body">
+            <h5 class="card-title" style="text-align:center">@ViewBag.BookCount</h5>
+        </div>
+    </div>
+
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+    <div class="mx-1"></div> 
+
+    <div class="card text-bg-info mb-3 custom-card2" style="max-width: 18rem;">
+        <div class="card-header custom-header">Sistemdeki Kategori Sayısı</div>
+        <div class="card-body">
+            <h5 class="card-title" style="text-align:center">@ViewBag.CategoryCount</h5>
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-card {
+        background-color: cyan;
+        color: black;
+        border: 1px solid black;
+        padding: 30px;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+        /* Diğer stil kuralları */
+    }
+
+    .custom-card2 {
+        background-color: green;
+        color: black;
+        border: 1px solid black;
+        padding: 30px;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+        /* Diğer stil kuralları */
+    }
+
+    .custom-header {
+        background-color: grey;
+        color: black;
+        border: 1px solid black;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        /* Diğer stil kuralları */
+    }
+</style>
+
